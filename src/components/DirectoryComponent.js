@@ -49,11 +49,7 @@ class Directory extends Component {
                 <div className="row">
                     {directory}
                 </div>
-                <div className="row">
-                    <div className="col-md-5 m-1">
-                        {this.renderSelectedCampsite(this.state.selectedCampsite)}
-                    </div>
-                </div>
+                <CampsiteInfo campsite= {this.state.selectedCampsite} />
             </div>
         );
     }
