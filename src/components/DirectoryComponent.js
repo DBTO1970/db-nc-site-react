@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from 'reactstrap';
 import CardBody from 'reactstrap/lib/CardBody';
+import CampsiteInfo from './CampsiteInfoComponent';
 class Directory extends Component {
     constructor(props) {
         super(props);
