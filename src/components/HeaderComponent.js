@@ -54,7 +54,7 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/contact">
+                                    <NavLink className="nav-link" to="/contactus">
                                         <i className="fa fa-address-card fa-lg" /> Contact Us
                                     </NavLink>
                                 </NavItem>
