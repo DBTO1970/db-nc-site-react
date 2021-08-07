@@ -24,16 +24,17 @@ class Header extends Component {
 
     toggleModal() {
         this.setState({
-            isModalOpen: !this.state.isOpen
+            isModalOpen: !this.state.isModalOpen
         });
     }
 
     handleLogin(event) {
         alert(`Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`);
         this.toggleModal();
-        event.preventDefault();
+        
     }
     
+  
 
     render() {
         return(
@@ -105,7 +106,7 @@ class Header extends Component {
                                         Remember me
                                     </Label>
                                 </FormGroup>
-                                <Button type="submit" value="submit" color="primary">Login</Button>
+                                <Button type="submit" value="submit" color="primary" onClick={this.toggleModal} >Login</Button>
                             </Form>
                     </ModalBody>
                 </Modal>
