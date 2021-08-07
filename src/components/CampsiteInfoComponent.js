@@ -73,7 +73,7 @@ class CommentForm extends Component {
                                 <Control.textarea model=".text" name="text" id="text" rows="6" className='form-control' />
                             </div>
                             <div className="form-group">
-                                <Button type="submit" color="primary">
+                                <Button type="submit" color="primary" onClick={this.toggleModal}>
                                             Send Feedback
                                         </Button>
                             </div>
