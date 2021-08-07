@@ -78,12 +78,12 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="firstName" md={2}>First Name</Label>
                                 <Col md={10}>
-                                    <Control.text model=".firstName" id="firstName" name="firstName"
-                                    placeholder="First Name"
-                                    className="form-control"
+                                    <Control.text model=".firstName" id="firstName" name="firstName" 
+                                    placeholder="First Name" 
+                                    className="form-control" 
                                     validators={{
-                                        required,
-                                        minLength: minLength(2),
+                                        required, 
+                                        minLength: minLength(2), 
                                         maxLength: maxLength(15)
                                     }}
                                     />
@@ -93,7 +93,7 @@ class Contact extends Component {
                                         show='touched'
                                         component='div'
                                         messages={{
-                                            required: 'Reuired',
+                                            required: 'Required',
                                             minLength: 'Must be at least 2 characters.',
                                             maxLength: 'Must be 15 characters or less.'
                                         }}
@@ -118,7 +118,7 @@ class Contact extends Component {
                                         show='touched'
                                         component='div'
                                         messages={{
-                                            required: 'Reuired',
+                                            required: 'Required',
                                             minLength: 'Must be at least 2 characters.',
                                             maxLength: 'Must be 15 characters or less.'
                                         }}
@@ -145,7 +145,7 @@ class Contact extends Component {
                                         show='touched'
                                         component='div'
                                         messages={{
-                                            required: 'Reuired',
+                                            required: 'Required',
                                             minLength: 'Must be at least 10 numbers.',
                                             maxLength: 'Must be 15 numbers or less.',
                                             isNumber: 'Must be a number'
@@ -170,7 +170,7 @@ class Contact extends Component {
                                         show='touched'
                                         component='div'
                                         messages={{
-                                            required: 'Reuired',
+                                            required: 'Required',
                                             validEmail: 'Invalid email address'
                                         }}
                                         />
@@ -209,8 +209,6 @@ class Contact extends Component {
                                     <Control.textarea model=".feedback" id="feedback" name="feedback"
                                     className="form-control"
                                         rows="12"
-                                        value={this.state.feedback}
-                                        onChange={this.handleInputChange}
                                         />
                                 </Col>
                             </Row>
