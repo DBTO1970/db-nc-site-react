@@ -1,7 +1,8 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 function About(props) {
 
@@ -12,12 +13,32 @@ function About(props) {
             </Media>
         );
     });
+    
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+
+    if (props.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    }
 
     function RenderPartner({partner}) {
         if (partner) {
             return (
                 <React.Fragment>
-                    <Media object src={partner.image} alt={partner.name} width="150" />
+                    <Media object src={baseUrl + partner.image} alt={partner.name} width="150" />
                     <Media body className="ml-5 mb-4">
                      <Media heading >{partner.name}</Media>
                     {partner.description}
