@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createForms } from 'react-redux-form';
 import { Campsites } from './campsites';
 import { Comments } from './comments';
-import { Partners } from './partners';
+import { PARTNERS } from './partners';
 import {Promotions } from './promotions';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -14,7 +14,7 @@ export const ConfigureStore = () => {
         combineReducers({
             campsites: Campsites,
             comments: Comments,
-            partners: Partners,
+            partners: PARTNERS,
             promotions: Promotions,
             ...createForms({
                 feedbackForm: InitialFeedback

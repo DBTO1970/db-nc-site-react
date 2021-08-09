@@ -1,5 +1,5 @@
 import * as ActionTypes from './ActionTypes';
-import { baseUrl } from "../shared/baseUrl";
+import { baseUrl } from "./baseUrl";
 
 
 export const addComment = (campsiteId, rating, author, text) => ({
@@ -72,24 +72,4 @@ export const addPromotions = promotions => ({
     payload: promotions
 });
 
-export const fetchPartners = () => dispatch => {
-    dispatch(partnersLoading());
 
-    return fetch(baseUrl + 'partners')
-    .then(response => response.json())
-    .then(partners => dispatch(addPartners(partners)));
-};
-
-export const partnersLoading = () => ({
-    type: ActionTypes.PARTNERS_LOADING
-});
-
-export const paratnersFailed = errMess => ({
-    type: ActionTypes.PARTNERS_FAILED,
-    payload: errMess
-});
-
-export const addPartners = partners => ({
-    type: ActionTypes.ADD_PARTNERS,
-    payload: partners
-});
