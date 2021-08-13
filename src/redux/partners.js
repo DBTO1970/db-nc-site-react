@@ -5,8 +5,4 @@ export const Partners = (state = PARTNERS, action) => {
         default:
             return state;
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> week5-redo2

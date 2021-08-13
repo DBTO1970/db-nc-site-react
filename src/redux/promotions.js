@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { PROMOTIONS } from '../shared/promotions';
-
-export const Promotions = (state = PROMOTIONS, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-};
-=======
 import * as ActionTypes from './ActionTypes';
 
 export const Promotions = (state = { isLoading: true, errMess: null, promotions: []}, action) => {
@@ -22,4 +12,3 @@ export const Promotions = (state = { isLoading: true, errMess: null, promotions:
             return state;
     }
 };
->>>>>>> week5-redo2
