@@ -48,8 +48,15 @@ function RenderComments({comments, postComment, campsiteId}) {
                                 </div>
                             </Fade>);})
                     }
+                    <FadeTransform 
+                        in
+                        transformProps={{
+                            exitTransform: 'scale(0.5) translateY(-50%)'
+                        }}>
+                        <CommentForm campsiteId={campsiteId} postComment={postComment} />
+                    </FadeTransform>
                  </Stagger>
-                <CommentForm campsiteId={campsiteId} postComment={postComment} />
+                 
             </div>
         );
     }
