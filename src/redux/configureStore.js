@@ -15,18 +15,9 @@ export const ConfigureStore = () => {
             campsites: Campsites,
             comments: Comments,
             partners: Partners,
-<<<<<<< HEAD
             promotions: Promotions
         })
 
-=======
-            promotions: Promotions,
-            ...createForms({
-                feedbackForm: InitialFeedback
-            })
-        }),
-        applyMiddleware(thunk, logger)
->>>>>>> week5-redo2
     );
 
     return store;
