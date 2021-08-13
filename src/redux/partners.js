@@ -1,4 +1,4 @@
-export const PARTNERS = [
+export const Partners = [
     {
         id: 0,
         name: "Bootstrap Outfitters",
