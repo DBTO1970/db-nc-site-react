@@ -36,8 +36,8 @@ export const addCampsites = campsites => ({
 
 export const fetchComments = () => dispatch => {
     return fetch(baseUrl + 'comments')
-    .then(response => response.json())
-    .then(comments => dispatch(addComments(comments)));
+        .then(response => response.json())
+        .then(comments => dispatch(addComments(comments)));
 };
 
 export const commentsFailed = errMess => ({
