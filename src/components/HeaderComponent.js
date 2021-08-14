@@ -31,7 +31,7 @@ class Header extends Component {
     handleLogin(event) {
         alert(`Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`);
         this.toggleModal();
-        event.preventDefault();
+        // event.preventDefault();
     }
     
 
@@ -105,7 +105,7 @@ class Header extends Component {
                                         Remember me
                                     </Label>
                                 </FormGroup>
-                                <Button type="submit" value="submit" color="primary">Login</Button>
+                                <Button type="submit" value="submit" color="primary"  toggle={this.toggleModal}>Login</Button>
                             </Form>
                     </ModalBody>
                 </Modal>

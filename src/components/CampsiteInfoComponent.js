@@ -186,7 +186,7 @@ function CampsiteInfo(props) {
                         <RenderCampsite campsite={props.campsite} />
                         <RenderComments 
                         comments={props.comments}
-                        addComment={props.addComment}
+                        postComment={props.postComment}
                         campsiteId={props.campsite.id}
 
                         />
